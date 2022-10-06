@@ -85,17 +85,17 @@ p <- ggplot(data = gapminder,
             mapping = aes(x = gdpPercap,
                           y = lifeExp))
 p + geom_point(color = "purple") +
-    geom_smooth(method = "loess") +
+    geom_smooth(color = "red",method = "loess") +
     scale_x_log10()
 
 
-# Setting opacity for points and color for line
+# Setting opacity for points and color for line (alpha)
 
 p + geom_point(alpha = 0.3) +
     geom_smooth(color = "orange", se = FALSE, size = 8, method = "lm") +
     scale_x_log10()
 
-
+#se is the standard error region 
 # Tying all this together
 
 p + geom_point(alpha = 0.3) + geom_smooth(method = "gam") +
@@ -116,7 +116,7 @@ p + geom_point() +
     geom_smooth(method = "loess") +
     scale_x_log10()
 
-
+View(gapdata)
 ## ----03-make-a-plot-17, fig.cap='Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.', fig.width=8.5, fig.height=5----
 
 p <- ggplot(data = gapminder,

@@ -18,6 +18,9 @@ p <- ggplot(data = gss_sm, mapping = aes(x = age, y = childs))
 p + geom_point(alpha = 0.2) + 
   geom_smooth() +
   facet_grid(sex ~ race)
+p + #geom_point(alpha = 0.2) + 
+  geom_smooth() +
+  facet_grid(sex ~ race)
 
 # Using geom_bar() for categorical variables (i.e., factors)
 
